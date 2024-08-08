@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Nav from '../components/Nav'
 import Listitem from '../components/Listitem'
+import Listitemtwo from '../components/ListItemtwo'
 import Searchbar from '../components/Searchbar'
 import { useNavigate } from 'react-router-dom';
-const uri=`https://api.mangadex.org/manga?includes[]=cover_art&contentRating[]=safe&contentRating[]=suggestive&hasAvailableChapters=true&order[followedCount]=desc&includes[]=author&createdAtSince=2024-07-07T18%3A30%3A00&limit=60`
+const uri=`https://api.mangadex.org/manga?includes[]=cover_art&contentRating[]=safe&contentRating[]=suggestive&hasAvailableChapters=true&order[followedCount]=desc&includes[]=author&limit=60`
 
 
 function Home() {
@@ -36,13 +37,14 @@ function Home() {
     {
    
     Object.values(mangas).map((manga,index)=>(
-        <Listitem manga={manga} index={index}/>
+        <Listitem key={index} manga={manga} index={index}/>
        
     ))
     
     }
     </div>
     </section>
+   
     </>
   )
 }

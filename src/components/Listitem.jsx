@@ -8,15 +8,15 @@ function Listitem({manga}) {
     };
     
     const firstEnTitles = getFirstEnTitle(manga);
-    console.log(firstEnTitles)
+    
   return (
     <>
     
-        <div className='p-4 w-44 h-[350px] flex-[25%] border-black border-solid '>
-        <Link to={`/manga/${manga.id}`}>
-        <img className='object-contain h-[256px] mr-[4rem] ease-in duration-250 hover:h-[256px]' src={`https://mangadex.org/covers/${manga.id}/${(manga.relationships.find(rel => rel.type === "cover_art")).attributes.fileName}.256.jpg`} loading="lazy"/>
+        <div className='p-4 w-44 h-[150px] flex-[33%] border-black border-solid '>
+        <Link to={`/manga/${manga.id}`} className='flex bg-gray-100 text-black p-5 duration-100 ease-in-out mb-[-50px]'>
+        <img className='object-contain h-[100px] mr-[4rem] ease-out duration-250 hover:h-[120px]' src={`https://mangadex.org/covers/${manga.id}/${(manga.relationships.find(rel => rel.type === "cover_art")).attributes.fileName}.256.jpg`} loading="lazy"/>
         
-            <h3 className='text-[16px] font-semibold'>
+            <h3 className='text-[14px] rubik_thin font-semibold'>
                 
                 
             {firstEnTitles}
