@@ -21,7 +21,7 @@ function Nav() {
         <div className="">
             <ul className='flex mt-2 '>
                 <li className='mr-6 text-[24px] uppercase font-bold cursor-pointer'><Link to='/'>Home</Link>  </li>
-                <li className='mr-6 text-[24px] uppercase font-bold cursor-pointer'>Genre</li>
+                <li className='mr-6 text-[24px] uppercase font-bold cursor-pointer'><Link to='/genre'>Genre</Link></li>
                 <li className='mr-6 text-[24px] uppercase font-bold cursor-pointer' onClick={randommanga}>Random</li>
             </ul>
         </div>
