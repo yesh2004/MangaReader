@@ -11,9 +11,15 @@ const uri2=`https://api.mangadex.org/manga?limit=15&contentRating[]=safe&content
 function Home() {
     const[mangas,Setmangas]=useState([])
     const [mangas2,setMangas2]=useState([])
+    const config = {
+      headers: {
+        "Referer": " "
+        
+      },
+    };
     useEffect(()=>{
         
-        axios.get(uri).then(res =>{
+        axios.get(uri,config).then(res =>{
             
             
             
@@ -21,7 +27,7 @@ function Home() {
             Setmangas(res.data.data)
             
         }).catch((err)=>{console.log(err)})
-        axios.get(uri2).then(res =>{
+        axios.get(uri2,config).then(res =>{
             
             
             
